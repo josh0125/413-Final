@@ -1,0 +1,65 @@
+﻿
+
+@model Entertainer
+
+<div class="container">
+    <div class="text-center">
+        <h3>Entertainer Submission</h3>
+    </div>
+    <form method="post">
+        <input type="hidden" asp-for="EntertainerId" />
+
+        <div asp-validation-summary="All"></div>
+
+        <label asp-for="EntStageName" class="form-label">Entertainer Stage Name</label>
+        <input asp-for="EntStageName" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntSsn" class="form-label">SSN</label>
+        <input asp-for="EntSsn" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntStreetAddress" class="form-label">Street Address</label>
+        <input asp-for="EntStreetAddress" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntCity" class="form-label">City</label>
+        <input asp-for="EntCity" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntState" class="form-label">State</label>
+        <input asp-for="EntState" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntZipCode" class="form-label">Zipcode</label>
+        <input asp-for="EntZipCode" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntPhoneNumber" class="form-label">Phone Number</label>
+        <input asp-for="EntPhoneNumber" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntWebPage" class="form-label">Web Page</label>
+        <input asp-for="EntWebPage" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="EntEmailAddress" class="form-label">Email Address</label>
+        <input asp-for="EntEmailAddress" type="text" class="form-control" />
+        <br />
+
+        <label asp-for="DateEntered" class="form-label">Date Entered</label>
+        <input asp-for="DateEntered" type="text" class="form-control" />
+        <br />
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary text-center">Submit Changes</button>
+        </div>
+    </form>
+
+    <div class="text-center mt-3 pt-3">
+    <form method="post" asp-action="Delete">
+        <input type="hidden" asp-for="EntertainerId" />
+        <button type="Submit" class="btn btn-primary">Delete</button>
+    </form>
+    </div>
+</div>
